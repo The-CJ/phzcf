@@ -4,7 +4,8 @@ A Yaml file style with JSON support.
 I just made this because i wanted my config files to look like i want them, soooo yeah... duh
 
 It suppose to be an easy to read syllable file, which contents can be easily imported into a python program,
-Together with full JSON support in variable values.
+Together with full JSON support in variable values.  
+In it's core it's meant to be one-dimensional, but you might use JSON objects or list to got as deep as you want.
 
 ## Background info
 I actually just made this, because you can not add comments into JSON files, which i used a long time to store my configs.  
