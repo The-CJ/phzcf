@@ -22,3 +22,8 @@ from .loader import (
 	loadBytes,
 	loadString
 )
+
+from .dumper import (
+	dumpAsString,
+	dumpInFile
+)
