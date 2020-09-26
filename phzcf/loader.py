@@ -85,9 +85,13 @@ def loadString(source:str, **options:dict) -> Dict[str, Any]:
 
 		if (final_return.get(var_name, object) != object) and (abort_on_overwrite): raise ValueOverwrite(f"a key has would have been overwritten, key: {var_name}")
 
-		final_return[var_name] = json.loads(var_value)
+		try:
+			final_return[var_name] = json.loads(var_value)
+		except json.decoder.JSONDecodeError:
+			raise JsonDecodeError(f"Can't decode line value: {line=} {var_value=}")
 
 	return final_return
 
 class InvalidLine(Exception): pass
 class ValueOverwrite(Exception): pass
+class JsonDecodeError(Exception): pass
