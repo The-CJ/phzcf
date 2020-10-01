@@ -13,7 +13,7 @@ __title__ = 'phzcf'
 __author__ = 'The_CJ'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2020 The_CJ'
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from .loader import (
 	load,
