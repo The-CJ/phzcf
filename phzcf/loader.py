@@ -58,7 +58,7 @@ def loadBytes(source:bytes, **options:dict) -> Dict[str, Any]:
 def loadString(source:str, **options:dict) -> Dict[str, Any]:
 	abort_on_garbage:bool = bool( options.get("abort_on_garbage", False) )
 	abort_on_overwrite:bool = bool( options.get("abort_on_overwrite", False) )
-	comment_re:str = str( options.get("comment_re", r"(#|//).*") )
+	comment_re:str = str( options.get("comment_re", r"^(#|//).*") )
 
 	final_return:Dict[str, Any] = {}
 
